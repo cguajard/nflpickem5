@@ -1,0 +1,32 @@
+<body>
+<!--<div ng-repeat="game in controller.schedule">-->
+    <!--{{game.AwayTeam}} vs. {{game.HomeTeam}}-->
+<!--</div>-->
+<!--<div>-->
+    <!--<pre>-->
+      <!--<div ng-bind="controller.schedule | json"></div>-->
+    <!--</pre>-->
+<!--</div>-->
+<table id="schedule" class="table table-striped">
+    <thead style="font-size:12px;">
+    <tr>
+        <th>Date</th>
+        <th>Away Team</th>
+        <th>vs.</th>
+        <th>Home Team</th>
+        <th>Pick</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr ng-repeat="game in controller.schedule">
+        <td>{{ game.Date | date:'MM/dd/yyyy @ h:mma' }}</td>
+        <td>{{ game.AwayTeam }}</td>
+        <td>vs.</td>
+        <td>{{ game.HomeTeam }}</td>
+        <td><select>
+            <option ng-repeat="x in controller.pickPoints">{{x}}</option>
+        </select></td>
+    </tr>
+    </tbody>
+</table>
+</body>
