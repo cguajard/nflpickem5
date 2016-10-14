@@ -13,3 +13,10 @@ hs_err_pid*
 
 # intelliJ
 .idea/
+.project
+.metadata
+.classpath
+.settings/
+**/Thumbs.db
+target
+*.iml
